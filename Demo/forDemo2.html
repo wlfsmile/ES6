@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>forDemo2</title>
+</head>
+<body>
+<script type="text/javascript">
+// 用Generator函数包装对象
+	var obj = {
+		a: 1,
+		b: 2,
+		c: 3
+	};
+	function* entries(obj){
+		for(let key of Object.keys(obj)){
+			yield [key,obj[key]];
+		}
+	}
+	for(let [key,value] of entries(obj)){
+		console.log(key,"->",value);
+	}
+</script>	
+</body>
+</html>

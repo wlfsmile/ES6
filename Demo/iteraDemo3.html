@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>iteraDemo3</title>
+</head>
+<body>
+<script type="text/javascript">
+// 为对象添加Iterator
+	// let obj = {
+	// 	data : ['hello','world'],
+	// 	[Symbol.iterator]() {
+	// 		const self = this;
+	// 		let index = 0;
+	// 		return {
+	// 			next(){
+	// 				if(index < self.data.length){
+	// 					return {
+	// 						value : self.data[index++],
+	// 						done : false
+	// 					};
+	// 				}else{
+	// 					return {value : undefined , done : true};
+	// 				}
+	// 			}
+	// 		};
+	// 	}
+	// };
+// 为类数组对象部署Iterator接口的简便方法：Symbol.iterator方法直接引用数组的Iterator接口
+	// let iterable = {
+	// 	0 : 'a',
+	// 	1 : 'b',
+	// 	2 : 'c',
+	// 	length : 3,
+	// 	[Symbol.iterator] : Array.prototype[Symbol.iterator]
+	// };
+	// for(let item of iterable){
+	// 	console.log(item);
+	// }
+</script>
+</body>
+</html>

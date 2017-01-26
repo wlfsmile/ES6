@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>GeneratorDemo3</title>
+</head>
+<body>
+<script type="text/javascript">
+// 第一次调用next方法就可以输入值的用法
+	// function wapper(generatorFuction){
+	// 	return function(...args){
+	// 		let generatorObject = generatorFuction(...args);
+	// 		console.log(generatorObject);
+	// 		return generatorObject;
+	// 	};
+	// }
+	// const wapped = wapper(function* (){
+	// 	console.log(`First input: ${yield}`);
+	// 	return 'DONE';
+	// });
+	// wapped().next('hello');
+
+
+
+	// function* objectEntries(obj){
+	// 	let propkeys = Reflect.ownKeys(obj);
+	// 	for(let propkey of propkeys){
+	// 		yield [propkey,obj[propkey]];
+	// 	}
+	// }
+	// let jane = {first:'Jane',last:'Doe'};
+	// for(let [key,value] of objectEntries(jane)){
+	// 	console.log(`${key}:${value}`);
+	// }
+
+
+	// function* objectEntries(obj){
+	//  	let propkeys = Object.keys(this);
+	//  	for(let propkey of propkeys){
+	//  		yield [propkey,this[propkey]];
+	//  	}
+	// }
+	// let jane = {first:'Jane',last:'Doe'};
+	// jane[Symbol.iterator] = objectEntries;
+	// for(let [key,value] of jane){
+	// 	console.log(`${key}:${value}`);
+	// }
+</script>	
+</body>
+</html>

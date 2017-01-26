@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>promiseDemo2</title>
+</head>
+<body>
+<div ></div>
+<script type="text/javascript">
+//promise异步加载图片
+	function LoadImageAsync(url){
+        var promise = new Promise(function(resolve,reject){
+            var image = new Image();
+            image.onload = function(){
+                resolve(); 
+            };
+            console.log(1);
+            image.onerror = function(){
+                reject(new Error('Could not load image '));
+            };
+            image.src = url;
+        });
+        return promise; 
+    }
+	LoadImageAsync("img/ttt.jpeg").then(function(){alert(1)});
+
+// promise的ajax
+	
+</script>	
+</body>
+</html>
